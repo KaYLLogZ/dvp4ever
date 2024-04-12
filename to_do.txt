@@ -1,0 +1,3 @@
+blinder les saisies
+ajouter les dispo en fonction des cations
+developper la partie employe

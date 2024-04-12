@@ -75,9 +75,7 @@ public class vehicule {
         this.disponibilite = disponibilite;
     }
     public void afficherAttributs() {
-        System.out.println("ID: " + id);
-        System.out.println("Marque: " + marque);
-        System.out.println("Modèle: " + modele);
+        System.out.println("\n" + marque + " " + modele);
         System.out.println("Année: " + annee);
         System.out.println("Type: " + type);
         System.out.println("Puissance: " + puissance);
@@ -85,5 +83,9 @@ public class vehicule {
         System.out.println("Catégorie: " + categorie);
         System.out.println("Disponibilité: " + disponibilite);
         System.out.println("\n");
+    }
+
+    public void preview(){
+        System.out.println(id + " " + marque + " " + modele);
     }
 }
