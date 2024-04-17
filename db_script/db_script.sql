@@ -1,3 +1,5 @@
+USE le_nom_de_ta_bdd;
+
 CREATE TABLE vehicule (
     id INT AUTO_INCREMENT PRIMARY KEY,
     marque VARCHAR(255),
