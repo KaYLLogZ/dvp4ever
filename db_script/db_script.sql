@@ -10,12 +10,12 @@ CREATE TABLE vehicule (
     disponibilite INT
 );
 
-INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponiblite) VALUES ('Porsche', 'Cayman 718', 2022, 'coupe', 300, 'arriere', 1, 10);
-INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponiblite) VALUES ('Mercedes', 'GT 53 AMG', 2023, 'coupe', 430, 'arriere', 2, 10);
-INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponiblite) VALUES ('BMW', 'M3 Competition', 2023, 'coupe', 500, 'arriere', 2, 10);
-INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponiblite) VALUES ('Aston Martin', 'Vantage', 2024, 'coupe', 510, 'arriere', 3, 5);
-INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponiblite) VALUES ('Lamborgini', 'Huracan EVO', 2021, 'coupe', 630, 'arriere', 4, 3);
-INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponiblite) VALUES ('Ferrari', '488 Pista', 2020, 'coupe', 710, 'arriere', 5, 3);
+INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponibilite) VALUES ('Porsche', 'Cayman 718', 2022, 'coupe', 300, 'arriere', 1, 10);
+INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponibilite) VALUES ('Mercedes', 'GT 53 AMG', 2023, 'coupe', 430, 'arriere', 2, 10);
+INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponibilite) VALUES ('BMW', 'M3 Competition', 2023, 'coupe', 500, 'arriere', 2, 10);
+INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponibilite) VALUES ('Aston Martin', 'Vantage', 2024, 'coupe', 510, 'arriere', 3, 5);
+INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponibilite) VALUES ('Lamborgini', 'Huracan EVO', 2021, 'coupe', 630, 'arriere', 4, 3);
+INSERT INTO vehicule (marque, modele, annee, type, puissance, transmission, categorie, disponibilite) VALUES ('Ferrari', '488 Pista', 2020, 'coupe', 710, 'arriere', 5, 3);
 
 CREATE TABLE client (
     id INT AUTO_INCREMENT PRIMARY KEY,

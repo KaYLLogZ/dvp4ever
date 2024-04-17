@@ -7,6 +7,7 @@ public class client extends utilisateur {
     private Date date_inscription;
     private boolean particulier;
 
+    public client(){}
     public client(int i, String n, String p, String m, String pswd, int c, Date d, boolean p2){
         super(i, n, p, m, pswd);
         this.categorie_abonnement = c;
@@ -32,12 +33,18 @@ public class client extends utilisateur {
     public void setParticulier(boolean particulier) {
         this.particulier = particulier;
     }
+    public void setAttribut2(int i, String n, String p, String m, String pa, int c, Date d, boolean p3){
+        setAttribut1(i, n, p, m, pa);
+        categorie_abonnement = c;
+        date_inscription = d;
+        particulier = p3;
+    }
 
     public void afficherAttributs() {
         super.afficherAttributs();
-        System.out.println("Catégorie abonnement : " + categorie_abonnement);
-        System.out.println("Date inscription : " + date_inscription);
-        System.out.println("Particulier : " + particulier);
+        System.out.println("5. Catégorie abonnement : " + categorie_abonnement);
+        System.out.println("6. Date inscription : " + date_inscription);
+        System.out.println("7. Particulier : " + particulier);
         System.out.println("\n");
     }
 }

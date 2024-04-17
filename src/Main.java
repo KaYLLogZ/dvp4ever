@@ -6,3 +6,6 @@ public class Main {
         c.run();
     }
 }
+
+// project root :
+// C:\My Documents\work\school\cours S6\java\PROJET_DVP\projet_dvp

@@ -1,3 +1,7 @@
 blinder les saisies
-ajouter les dispo en fonction des cations
+ajouter les dispo en fonction des locations
 developper la partie employe
+
+-_-_-_-_-_-_-_-_-_
+
+faire test condition location

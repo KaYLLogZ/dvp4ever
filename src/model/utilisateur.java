@@ -7,6 +7,7 @@ public class utilisateur {
     private String mail;
     private String password;
 
+    public utilisateur(){}
     public utilisateur(int i, String n, String p, String m, String pswd){
         this.id = i;
         this.nom = n;
@@ -46,13 +47,18 @@ public class utilisateur {
     public void setPassword(String password) {
         this.password = password;
     }
+    public void setAttribut1(int i, String n, String p, String m, String pa){
+        id = i;
+        nom = n;
+        prenom = p;
+        mail = m;
+        pa = p;
+    }
 
     public void afficherAttributs() {
-        System.out.println("ID : " + id);
-        System.out.println("Nom : " + nom);
-        System.out.println("Prénom : " + prenom);
-        System.out.println("Mail : " + mail);
-        System.out.println("Mot de passe : " + password);
-        System.out.println("\n");
+        System.out.println("1. Nom : " + nom);
+        System.out.println("2. Prénom : " + prenom);
+        System.out.println("3. Mail : " + mail);
+        System.out.println("4. Mot de passe : " + password);
     }
 }

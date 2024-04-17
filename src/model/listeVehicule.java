@@ -26,32 +26,6 @@ public class listeVehicule {
         maListe.clear();
 
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/turismo_db", "root", "ri52phpc")) {
-            /*
-            String sql = "SELECT * FROM vehicule WHERE (? AND ? AND ? AND ? AND ? AND ? AND ?);";
-            PreparedStatement stmt = conn.prepareStatement(sql);
-
-            if(filtreMarque == null) stmt.setString(1, "1 = 1");
-            else stmt.setString(1, "marque = " + filtreMarque);
-
-            if(filtreModele == null) stmt.setString(2, "1 = 1");
-            else stmt.setString(2, "modele = " + filtreModele);
-
-            if(filtreAnnee == 0) stmt.setString(3, "1 = 1");
-            else stmt.setString(3, "annee > " + filtreAnnee);
-
-            if(filtreType == null) stmt.setString(4, "1 = 1");
-            else stmt.setString(4, "type = " + filtreType);
-
-            if(filtrePuissance == 0) stmt.setString(5, "1 = 1");
-            else stmt.setString(5, "puissance > " + filtrePuissance);
-
-            if(filtreTransmission == null) stmt.setString(6, "1 = 1");
-            else stmt.setString(6, "transmission = " + filtreTransmission);
-
-            if(filtreCategorie == 0) stmt.setString(7, "1 = 1");
-            else stmt.setString(7, "categorie = " + filtreCategorie);
-            */
-
             String sql = "SELECT * FROM vehicule WHERE ";
 
             ArrayList<String> conditions = new ArrayList<>();
@@ -134,7 +108,11 @@ public class listeVehicule {
     }
 
     public void afficheList(){
-        System.out.println("\nFiltres");
+        if((filtreMarque == null) && (filtreModele == null) && (filtreAnnee == 0) && (filtreType == null) && (filtrePuissance == 0) && (filtreTransmission == null) && (filtreCategorie == 0)){
+            System.out.println("\nAucun filtre");
+        }else {
+            System.out.println("\nFiltres");
+        }
 
         if (filtreMarque != null) {
             System.out.println("Marque : "+ filtreMarque);
