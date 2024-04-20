@@ -4,10 +4,10 @@ import java.sql.*;
 public class DAOclient {
     client cl = null;
     public boolean connexionClient(String mail, String password, client cl){
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/turismo_db", "root", "ri52phpc")) {
+        // try (Connection conn = connexion_bdd.getConnexion()) {
             String sql = "SELECT * FROM client WHERE mail = ? AND pswd = ? GROUP BY id";
 
-            PreparedStatement stmt = conn.prepareStatement(sql);
+            PreparedStatement stmt = controller.conn.prepareStatement(sql);
 
             stmt.setString(1, mail);
             stmt.setString(2, password);
@@ -31,10 +31,12 @@ public class DAOclient {
 
             rs.close();
             stmt.close();
-
+        /*
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        */
+
 
         return false;
     }

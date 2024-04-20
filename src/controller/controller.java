@@ -5,6 +5,7 @@ import java.sql.*;
 import java.util.*;
 
 public class controller {
+    public static Connection conn = null;
     private listeVehicule lv = null;
     private listeLocation ll = null;
     private client cl = null;
@@ -40,8 +41,16 @@ public class controller {
         return cl;
     }
 
-    public void run(){
-        view.accueil();
+    public static Connection getConnexion(){
+        return conn;
+    }
+
+    public static void run(){
+        try (conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/turismo_db", "root", "ri52phpc")) {
+            view.accueil();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 
